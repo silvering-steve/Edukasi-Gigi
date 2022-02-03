@@ -12,6 +12,7 @@ public class Vidloader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        videoPlayer.playOnAwake = false;
         videoPlayer.url = videoUrl;
         videoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
         videoPlayer.EnableAudioTrack (0, true);
@@ -22,5 +23,15 @@ public class Vidloader : MonoBehaviour
     void Update()
     {
          
+    }
+
+    public void PlayVid()
+    {
+        videoPlayer.Play();
+    }
+
+    public void PauseVid()
+    {
+        videoPlayer.Pause();
     }
 }
